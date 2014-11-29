@@ -21,12 +21,11 @@ static volatile unsigned count_hi; // FTM0 high counter
 static volatile unsigned count;    // Performance counter
 
 // FFT data structure
-static fft_complex_t complex[256];
+fft_complex_t complex[256];
 
 // This function contains code to benchmark
-__INLINE
 static void benchmark(void) {
-  fft_inverse(complex, 256);
+  fft_inverse(complex, 8);
 }
 
 // Initialize FTM0
@@ -50,6 +49,12 @@ __INLINE
 static unsigned bench_end(void) {
   FTM0->SC = 0;
   return (FTM0->CNT | (count_hi << 16)) - 2;
+}
+
+// FTM0 overflow counter
+void FTM0_IRQHandler(void) {
+	FTM0->SC &= ~FTM_SC_TOF_MASK;
+	count_hi++;
 }
 
 int main() {
