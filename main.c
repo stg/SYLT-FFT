@@ -53,8 +53,8 @@ static unsigned bench_end(void) {
 
 // FTM0 overflow counter
 void FTM0_IRQHandler(void) {
-	FTM0->SC &= ~FTM_SC_TOF_MASK;
-	count_hi++;
+  FTM0->SC &= ~FTM_SC_TOF_MASK;
+  count_hi++;
 }
 
 int main() {
