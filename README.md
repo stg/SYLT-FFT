@@ -2,6 +2,7 @@ SYLT-FFT
 ========
 DEVSOUND (I)FFT(R) LIBRARY
 -------------------------------------
+<sup>And some other funky fixed-point maths like gray-coding and pow(2, f)</sup>
 
 **Optimized (C-level) for Keil C Compiler and GCC on Cortex-M4.**
 
