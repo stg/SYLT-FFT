@@ -7,7 +7,13 @@
 #include "stdint.h"
 #include "stdbool.h"
 
+#ifndef __INLINE
+#if defined(__GNUC__)
 #define __INLINE __attribute__((always_inline)) inline
+#else
+#define __INLINE __inline
+#endif
+#endif
 
 
 /* == MATH CONFIGURE =============================================== */
