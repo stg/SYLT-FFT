@@ -46,3 +46,11 @@ Please verify and do additional tests to add to the list.
   CMSIS-DSP             SYLT-FFT      N     KEIL     GCC
 * arm_cfft_radix2_q31   fft_inverse   256   +25.6%   +15.1%
 ```
+
+**Thanks to:**
+* Wikipedia - for existing and taking donations ;)
+* http://www.katjaas.nl/ - for intelligible merge spectra algorithm
+* https://github.com/xcore/ - for intelligible (i)fft algorithm
+* http://www.cmlab.csie.ntu.edu.tw/cml/dsp/training/coding/transform/fft.html - for intelligble algorithm breakdown
+*	[Visit GitHub!](www.github.com).
+goo.gl/yISIL1
