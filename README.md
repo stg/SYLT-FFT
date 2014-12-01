@@ -49,6 +49,6 @@ Please verify and do additional tests to add to the list.
 
 **Thanks to:**
 * [Wikipedia](http://www.wikipedia.org/) - for existing and taking donations
-* [KATJA](http://www.katjaas.nl/) - for intelligible merge spectra algorithm
-* [XCORE](https://github.com/xcore/) - for intelligible (i)fft algorithm
-*	[CMLAB](http://www.cmlab.csie.ntu.edu.tw/cml/dsp/training/coding/transform/fft.html) - for intelligble algorithm breakdown
+* [KATJA](http://www.katjaas.nl/) - for intelligible merge/split spectra algorithm
+* [XCORE](https://github.com/xcore/) - for intelligible (I)FFT algorithm
+*	[CMLAB](http://www.cmlab.csie.ntu.edu.tw/cml/dsp/training/coding/transform/fft.html) - for intelligble FFT algorithm breakdown
