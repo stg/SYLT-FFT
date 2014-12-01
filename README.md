@@ -51,4 +51,5 @@ Please verify and do additional tests to add to the list.
 * [Wikipedia](http://www.wikipedia.org/) - for existing and taking donations
 * [KATJA](http://www.katjaas.nl/) - for intelligible merge/split spectra algorithm
 * [XCORE](https://github.com/xcore/) - for intelligible (I)FFT algorithm
-*	[CMLAB](http://www.cmlab.csie.ntu.edu.tw/cml/dsp/training/coding/transform/fft.html) - for intelligble FFT algorithm breakdown
+*	[CMLAB](http://www.cmlab.csie.ntu.edu.tw/cml/dsp/training/coding/transform/fft.html) - for intelligible FFT algorithm breakdown
+* [BEVAN](http://web.ece.ucdavis.edu/~bbaas/281/slides/Handout.fft2.pdf) - for intelligible DIT vs. DIF, radix-2 vs. 4 overview
