@@ -9,6 +9,9 @@ DEVSOUND (I)FFT(R) LIBRARY
 **Authors:**
 * D. Taylor 2014 (gmail: senseitg)
 
+**License:**
+* MHG (GPL compatible) - see LICENSE
+
 **Features:**
 * FFT (Fast Fourier Transform) and IFFT (Inverse FFT)
 * Fixed-point 32-bit, Radix-2
