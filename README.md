@@ -15,8 +15,9 @@ DEVSOUND (I)FFT(R) LIBRARY
 **Features:**
 * FFT (Fast Fourier Transform) and IFFT (Inverse FFT)
 * Fixed-point 32-bit, Radix-2
-*	Complex or real data (with conversion overhead)
+*	Complex or real (with slight conversion overhead) data
 * No plan construction required before (I)FFT
+* No reliance on other libraries (including libm if using precomputed tables)
 
 **Options (config.h):**
 * DIT (decimation-in-time) or DIF (decimation-in-frequency)
