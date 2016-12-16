@@ -11,7 +11,7 @@ uint32_t rbit(uint32_t x) {
   uint32_t result;
 #if defined(__ARMCC_VERSION)
   __asm{ rbit result, x }
-#elif defined(__GNUC__) && defined(__arm__)
+#elif defined(__GNUC__) && defined(__arm__) && (__CORTEX_M != 0x00)
   __asm("rbit %0, %1":"=r"(result):"r"(x));
 #else
   x = (((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1));
@@ -31,7 +31,7 @@ uint32_t clz(uint32_t x) {
   uint32_t result;
 #if defined(__ARMCC_VERSION)
   __asm{ clz result, x }
-#elif defined(__GNUC__) && defined(__arm__)
+#elif defined(__GNUC__) && defined(__arm__) && (__CORTEX_M != 0x00)
   __asm("clz %0, %1":"=r"(result):"r"(x));
 #else
   x |= x >> 1; x |= x >> 2; x |= x >> 4; x |= x >> 8; x |= x >> 16;
@@ -49,7 +49,7 @@ int32_t smmlar(int32_t a, int32_t b, int32_t c) {
   int32_t result;
 #if defined(__ARMCC_VERSION)
   __asm{ smmlar result, a, b, c }
-#elif defined(__GNUC__) && defined(__arm__)
+#elif defined(__GNUC__) && defined(__arm__) && (__CORTEX_M != 0x00)
   __asm("smmlar %0, %1, %2, %3":"=r"(result):"r"(a),"r"(b),"r"(c));
 #else
   result = c + ((((int64_t)a * b) + 0x80000000) >> 32);
@@ -64,7 +64,7 @@ int32_t smmlsr(int32_t a, int32_t b, int32_t c) {
   int32_t result;
 #if defined(__ARMCC_VERSION)
   __asm{ smmlsr result, a, b, c }
-#elif defined(__GNUC__) && defined(__arm__)
+#elif defined(__GNUC__) && defined(__arm__) && (__CORTEX_M != 0x00)
   __asm("smmlsr %0, %1, %2, %3":"=r"(result):"r"(a),"r"(b),"r"(c));
 #else
   result = c - ((((int64_t)a * b) + 0x80000000) >> 32);
@@ -79,7 +79,7 @@ int32_t smmulr(int32_t a, int32_t b) {
   int32_t result;
 #if defined(__ARMCC_VERSION)
   __asm{ smmulr result, a, b }
-#elif defined(__GNUC__) && defined(__arm__)
+#elif defined(__GNUC__) && defined(__arm__) && (__CORTEX_M != 0x00)
   __asm("smmulr %0, %1, %2":"=r"(result):"r"(a),"r"(b));
 #else
   result = ((((int64_t)a * b) + 0x80000000) >> 32);
