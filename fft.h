@@ -108,8 +108,8 @@ void fft_forward(fft_complex_t data[], unsigned bits) {
         FFT_DECLC(A, data[a]); FFT_DECLC(B, data[b]);
 #ifdef FFT_DIT
         // # Radix-2 DIT trivial butterfly #
-        FFT_ASSGN(data[b], FFT_D2(FFT_S(FFT(A,r), FFT(B,r))), FFT_D2(FFT_A(FFT(A,i), FFT(B,i))));
-        FFT_ASSGN(data[a], FFT_D2(FFT_A(FFT(A,r), FFT(B,r))), FFT_D2(FFT_S(FFT(A,i), FFT(B,i))));
+        FFT_ASSGN(data[a], FFT_D2(FFT_A(FFT(A,r), FFT(B,i))), FFT_D2(FFT_S(FFT(A,i), FFT(B,r))));
+        FFT_ASSGN(data[b], FFT_D2(FFT_S(FFT(A,r), FFT(B,i))), FFT_D2(FFT_A(FFT(A,i), FFT(B,r))));
 #else//FFT_DIF
         // # Radix-2 DIF trivial butterfly #
         FFT_ASSGN(data[a], FFT_D2(FFT_A(FFT(A,r), FFT(B,r))), FFT_D2(FFT_A(FFT(A,i), FFT(B,i))));
